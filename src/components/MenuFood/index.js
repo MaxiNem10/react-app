@@ -1,86 +1,62 @@
 
-// let food1 = {
-//     title:'Суп Шулэн',
-//     sostav: ['Лапша', 'мясо', 'картошка'],
-//     priceCooking: 0,
-//     price: 200, // 'стоимость Шулэна 200 рублей' ,
-//   };
-// let food2 = {
-//     title:'Буузы',
-//     sostav: ['Тесто', 'фаршговяжий', 'фаршсвиной', 'лук'],
-//     priceCooking: 0,
-//     price: 250, //'стоимость бууз: 40 руб за 1 шт., 35 руб за 1 шт. замороженные',      
-//   };
-// let food3 = {  
-//     title:'Цуйван',
-//     sostav: ['Лапша', 'мясо', 'перецболгарский', 'лук'],
-//     priceCooking: 0,
-//     price: 150, //'стоимость Цуйвана 150 руб за 200 гр., стоимость Цуйвана 250 руб за 400 гр.',    
-//   };
-//   let food4 = { 
-//     title:'Морс',
-//     sostav: ['Вода', 'ягода',],
-//     priceCooking: 0,
-//     price: 50, //'50 руб за 200 гр.',    
-//   };
+import MenuCard from "./MenuCard";
 
-import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils";
 
-//   let food5 = {
-//     title:'Борщ',
-//     sostav: ['Капуста', 'мясокурицы', 'картошка'],
-//     priceCooking: 0,
-//     price:  120, //['120 руб за 200 гр.', '220 руб за 400 гр.'],    
-//   };
-//   let food6 = { 
-//     title:'вареники с картошкой',
-//     sostav: ['Тесто', 'картошка', 'лук'],
-//     priceCooking: 0,
-//     price: 100, //['100 руб за 120 гр.', '200 руб за 240 гр.'],   
-//     veganfood: true
-//   };
-//   let food7 = {      
-//     title:'Пюре с котлетой',
-//     sostav: ['картошка', 'фаршговяжий', 'подлив', 'лук'],
-//     priceCooking: 0,
-//     price: 130, //['130 руб за 200 гр.', '260 руб за 400 гр.'],    
-//   };
-//   let food8 = {
-//     title:'Чай',
-//     sostav: ['Вода', 'пакетикчая'],
-//     priceCooking: 0,
-//     price: 50, //'50 руб за 200 гр.',    
-//   };
-//   let food9 = {
-//     title:'Морс',
-//     sostav: ['Вода', 'ягода'],
-//     priceCooking: 0,
-//     price: 50, //'50 руб за 200 гр.',
-//     veganfood: true    
-//   };
-  
-//   let food10 = {  
-//     title:'Морс',
-//     sostav: ['Вода', 'ягода'],
-//     priceCooking: 0,
-//     price: 50, // '50 руб за 200 гр.',
-//     veganfood: true    
-//   };
-
-    
-// let MenuFood = [
-// food1,  food2, food3,  food4,  food5,  food6,
-// food7,  food8, food9,  food10,
-// ] ;
-
-const Menu = ({MenuFood, sostav, price} ) => {
+const Menu = ({onItemBuy}) => {
+  let menu = [
+    {
+      title: "Суп Шулэн",
+      sostav: ["Лапша", "мясо", "картошка"],
+      priceCooking: 0,
+      price: 200, // 'стоимость Шулэна 200 рублей' ,
+      image: "/assets/shulen.jpg",
+    },
+    {
+      title: "Буузы",
+      sostav: ["Тесто", "фаршговяжий", "фаршсвиной", "лук"],
+      priceCooking: 0,
+      price: 250, //'стоимость бууз: 40 руб за 1 шт., 35 руб за 1 шт. замороженные',
+      image: "https://voyagerestaurant.ru/wp-content/uploads/2020/07/hot_14.jpg",  
+    },
+    {
+      title: "Цуйван",
+      sostav: ["Лапша", "мясо", "перецболгарский", "лук"],
+      priceCooking: 0,
+      price: 150, //'стоимость Цуйвана 150 руб за 200 гр., стоимость Цуйвана 250 руб за 400 гр.',
+      image: "https://voyagerestaurant.ru/wp-content/uploads/2020/07/udon-grudka.jpg",
+    },
+   {
+    title:'Борщ',
+    sostav: ['Капуста', 'мясокурицы', 'картошка'],
+    priceCooking: 0,
+    price:  120, //['120 руб за 200 гр.', '220 руб за 400 гр.'],    
+    image: "https://voyagerestaurant.ru/wp-content/uploads/2020/07/soup_1.jpg",
+  },
+   { 
+    title:'Вареники с картошкой',
+    sostav: ['Тесто', 'картошка', 'лук'],
+    priceCooking: 0,
+    price: 100, //['100 руб за 120 гр.', '200 руб за 240 гр.'],   
+    veganfood: true,
+    image: "https://voyagerestaurant.ru/wp-content/uploads/2020/07/hot_3.jpg",
+   },
+   {
+    title:'Морс из брусники',
+    sostav: ['Брусника', 'морс', 'сахар'],
+    priceCooking: 0,
+    price: 100, //['100 руб за 120 гр.', '200 руб за 240 гр.'],   
+    veganfood: true,
+    image: "https://voyagerestaurant.ru/wp-content/uploads/2020/07/mors.jpg",
+  }
+  ];
   return (
-<> Блюдо {MenuFood} Состав: {sostav} Цена - {price}, 
-<p></p></>
-    );
+    <div className="mx-auto grid grid-cols-2 gap-2 container md:grid-cols-3 xl:grid-cols-4">
+      {menu.map((item) => (
+        <MenuCard item={item} onClickBuy={onItemBuy} />
+      ))}
+      
+    </div>
+  );
 };
-
-
- 
 
 export default Menu;
