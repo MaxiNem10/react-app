@@ -27,7 +27,7 @@ function App() {
         <div>
           <div className="text-xl">Корзина </div>
           <div>Количество товаров: {cart.length} </div>
-          <div>Сумма: {cart.reduce((sum, item) => sum+=item.price, 0)} руб. </div>              
+          <div>Сумма: {cart.reduce((sum, item) => sum+=item.price, 0)} руб. </div> 7             
         </div>
       </div> 
       <Menu onItemBuy={(item) => addToCart(item)}></Menu>
