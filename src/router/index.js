@@ -1,6 +1,8 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import AboutPage from "../pages/About";
+import Menu from "../components/MenuFood";
+import ContactsPage from "../pages/ContactsPage";
+import AboutPage from "../pages/AboutPage";
 
 
 
@@ -8,31 +10,31 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    
-//     children: [
-//     {path:"/", element:<Menu/>},
-//         {
-//         path: "about",
-//         element: <AboutPage />,
-//        children: [
+    children: [
+    //   {
+    //     path: "about",
+    //     element: <Outlet/>,
+
 //           {
 //             path: "contacts",
 //             element:(
 //                 <div>
 //                     <a href="+79516206273">89516206273</a>
 //                 </div>
-//             ) 
-//           } 
-//         ]
-//       },
 //     ]
+  // },
+          {
+            path: "about",
+            element: <AboutPage />,
+          },
+          {
+            path: "contacts",
+            element: <ContactsPage />,
+          },
+        ],
+      // },
+    // ],
   },
-  {
-  path: "about",
-element: <AboutPage />,
-
-  },
-]);
-
+])
 
 export default router;
