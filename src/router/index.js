@@ -3,6 +3,7 @@ import App from "../App";
 import Menu from "../components/MenuFood";
 import ContactsPage from "../pages/ContactsPage";
 import AboutPage from "../pages/AboutPage";
+import { Children } from "react";
 
 
 
@@ -10,19 +11,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-    //   {
-    //     path: "about",
-    //     element: <Outlet/>,
+  
+  children: [
+        {
+        path: "",
+        element: <Outlet />,
+      },  
+        
 
-//           {
-//             path: "contacts",
-//             element:(
-//                 <div>
-//                     <a href="+79516206273">89516206273</a>
-//                 </div>
-//     ]
-  // },
           {
             path: "about",
             element: <AboutPage />,
@@ -31,10 +27,11 @@ const router = createBrowserRouter([
             path: "contacts",
             element: <ContactsPage />,
           },
-        ],
-      // },
-    // ],
-  },
-])
+       
+        ]    
+        },
+    
+
+]);
 
 export default router;

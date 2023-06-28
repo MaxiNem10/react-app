@@ -27,9 +27,9 @@ function App() {
     
     <div className="App p-2">
      
-
-        <Outlet></Outlet>
-        <MainMenu />
+        <MainMenu /> 
+        <Outlet />        
+        <ContactsPage />
         {/* <ContactsPage></ContactsPage> */}
        <div className="mx-auto container flex flex-row-reverse text-right">
         <div>
