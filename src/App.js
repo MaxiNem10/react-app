@@ -5,7 +5,9 @@ import Image from "./components/Image";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
-import ContactsPage from "./pages/ContactsPage";
+import menu from "./components/FakeData/menu";
+
+
 
 
 
@@ -29,8 +31,8 @@ function App() {
      
         <MainMenu /> 
         <Outlet />        
-        <ContactsPage />
-        {/* <ContactsPage></ContactsPage> */}
+        {/* <ContactsPage /> */}
+        
        <div className="mx-auto container flex flex-row-reverse text-right">
         <div>
           <div className="text-xl">Корзина </div>

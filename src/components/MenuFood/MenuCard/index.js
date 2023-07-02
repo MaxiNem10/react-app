@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 
 const MenuCard = ({ item, onClickBuy = () => {}  }) => {
@@ -6,10 +7,11 @@ const MenuCard = ({ item, onClickBuy = () => {}  }) => {
     <div class={"rounded overflow-hidden shadow-lg textf-center " + style.card}>
       <img src={item.image} />
       <div>
+      <Link to={`/catalog/${item.id}`}>
         <div className={"text-1,8xl font-bold " + style.name}>
-          {" "}
           {item.title}
         </div>
+        </Link>
         <div className={"py-2 " + style.name}>{sostav}</div>
         <button
           onClick = {() => onClickBuy(item)}
