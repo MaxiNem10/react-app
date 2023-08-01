@@ -6,6 +6,7 @@ import ContactsPage from "../pages/ContactsPage";
 import MainMenu from "../components/MainMenu";
 import AboutPage from "../pages/AboutPage";
 import MenuItemPage from "../pages/MenuItemPage";
+import Corzina from "../components/Corzina";
 
 
 
@@ -16,9 +17,11 @@ const router = createBrowserRouter([
   
     
   children:[
-  // {path: "",
-  // element: <MainMenu />,
-  // },
+      
+  {path: "",
+    element: <Menu />,
+  },
+    
 
     {
       path: "/catalog/:id",
@@ -40,7 +43,6 @@ const router = createBrowserRouter([
    ]
   },
 ]
-   
   }, 
 ])
  

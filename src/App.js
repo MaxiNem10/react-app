@@ -6,41 +6,43 @@ import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import menu from "./components/FakeData/menu";
-
-
-
-
-
-
-
-
+import CartIcon from "./components/svg/CartIcon";
+// import CartProvider from "./components/CardProviders/CardProviders";
+// import CartWidget from "./components/Corzina";
+import Corzina from "./components/Corzina";
 
 
 function App() {
 
   
-   const [cart, setCart] = useState([]);
+  //  const [cart, setCart] = useState([]);
 
-   const addToCart = (item) => {
-    setCart([...cart, item]);
-   };
+  //  const addToCart = (item) => {
+  //   setCart([...cart, item]);
+  //  };
     
   return (
     
     <div className="App p-2">
      
-        <MainMenu /> 
-        <Outlet />        
+        <MainMenu />
+        <Corzina /> 
+        <Menu />
+        <Outlet /> 
+        
+        {/* <CartProvider>
+          <CartWidget />
+        </CartProvider>        */}
         {/* <ContactsPage /> */}
         
-       <div className="mx-auto container flex flex-row-reverse text-right">
+       {/* <div className="mx-auto container flex flex-row-reverse text-right">
         <div>
-          <div className="text-xl">Корзина </div>
-          <div>Количество товаров: {cart.length} </div>
+          <div className="p-2"><CartIcon /> </div>
+          <div>  Количество: {cart.length} </div>
           <div>Сумма: {cart.reduce((sum, item) => sum+=item.price, 0)} руб. </div>              
         </div>
-      </div> 
-      <Menu onItemBuy={(item) => addToCart(item)}></Menu>
+      </div>  */}
+      {/* <Menu onItemBuy={(item) => addToCart(item)}></Menu> */}
 
          
       {/*<Corzina></Corzina>*/}
