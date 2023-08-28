@@ -18,7 +18,7 @@ function App() {
   //  const [cart, setCart] = useState([]);
 
   //  const addToCart = (item) => {
-  //   setCart([...cart, item]);
+    // setCart([...cart, item]);
   //  };
     
   return (
@@ -30,9 +30,9 @@ function App() {
         <Menu />
         <Outlet /> 
         
-        {/* <CartProvider>
-          <CartWidget />
-        </CartProvider>        */}
+        {/* {/* <CartProvider> */}
+          {/* <CartWidget /> */}
+        {/* </CartProvider>        */} */}
         {/* <ContactsPage /> */}
         
        {/* <div className="mx-auto container flex flex-row-reverse text-right">
