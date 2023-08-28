@@ -7,9 +7,9 @@ import { Link, Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import menu from "./components/FakeData/menu";
 import CartIcon from "./components/svg/CartIcon";
-// import CartProvider from "./components/CardProviders/CardProviders";
-// import CartWidget from "./components/Corzina";
-import Corzina from "./components/Corzina";
+import CartProvider from "./components/CardProviders/CardProviders";
+import CartWidget from "./components/CartWidget";
+// import Corzina from "./components/Corzina";
 
 
 function App() {
@@ -26,15 +26,14 @@ function App() {
     <div className="App p-2">
      
         <MainMenu />
-        <Corzina /> 
-        <Menu />
-        <Outlet /> 
+        {/* <Corzina />  */}
         
-        {/* {/* <CartProvider> */}
-          {/* <CartWidget /> */}
-        {/* </CartProvider>        */} */}
-        {/* <ContactsPage /> */}
-        
+         
+        <CartProvider>
+        <CartWidget/>  
+        </CartProvider>        
+        <Outlet></Outlet>
+                
        {/* <div className="mx-auto container flex flex-row-reverse text-right">
         <div>
           <div className="p-2"><CartIcon /> </div>

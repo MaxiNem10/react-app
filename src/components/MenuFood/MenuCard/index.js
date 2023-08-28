@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
+import { addToCart } from "../../../store/slices/cartSlice";
+import { useDispatch } from "react-redux";
 
-const MenuCard = ({ item, onClickBuy = () => {}  }) => {
+const MenuCard = ({ item }) => {
+  const dispatch = useDispatch ();
   const sostav = <div className="text-xs "> {item.sostav.join(", ")} </div>;
   return (
     <div class={"rounded overflow-hidden shadow-lg textf-center " + style.card}>
@@ -14,7 +17,7 @@ const MenuCard = ({ item, onClickBuy = () => {}  }) => {
         </Link>
         <div className={"py-2 " + style.name}>{sostav}</div>
         <button
-          onClick = {() => onClickBuy(item)}
+          onClick = {() => dispatch (addToCart(item))}
           class="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
         >
           Купить
