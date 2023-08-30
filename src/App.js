@@ -1,12 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Menu from "./components/MenuFood";
-import Image from "./components/Image";
-import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
-import menu from "./components/FakeData/menu";
-import CartIcon from "./components/svg/CartIcon";
 import CartProvider from "./components/CardProviders/CardProviders";
 import CartWidget from "./components/CartWidget";
 // import Corzina from "./components/Corzina";
