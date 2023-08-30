@@ -11,7 +11,7 @@ const CartWidget = ({ cart, sum }) => {
           <div className="flex justify-end">
             <CartIcon /> X { cart.length} 
           </div>
-          <div>Сумма: {sum} руб</div>
+          <div>Сумма: {sum} рубы</div>
         </Link>
       </div>
     );

@@ -7,6 +7,7 @@ import MainMenu from "../components/MainMenu";
 import AboutPage from "../pages/AboutPage";
 import MenuItemPage from "../pages/MenuItemPage";
 import Corzina from "../components/CartWidget";
+import MenuPage from "../pages/MenuPage";
 
 
 
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   children:[
       
   {path: "/",
-    element: <Menu />,
+    element: <MenuPage />,
   },
     
 

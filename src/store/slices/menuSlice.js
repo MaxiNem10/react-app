@@ -4,8 +4,10 @@ import axios from "axios";
 const initialState = { items: [], loading: "Launch" };
 
 export const loadMenu = createAsyncThunk("menu/getMenu", async () => {
-  return axios.get("/data/menu.json").then((r) => r.data);
+  return axios.get ("/data/menu.json").then((r) => r.data);
+  
 });
+
 
 export const menuSlice = createSlice({
   name: "menu",
@@ -16,6 +18,7 @@ export const menuSlice = createSlice({
       state.loading = "fulfilled";
       state.items.length = 0;
       state.items.push(...action.payload);
+      console.log (loadMenu)
     });
     builder.addCase(loadMenu.pending, (state, action) => {
       state.loading = "pending";
