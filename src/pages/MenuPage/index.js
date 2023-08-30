@@ -8,6 +8,7 @@ import MenuCard from "../../components/MenuFood/MenuCard";
 
 
 
+
 const MenuPage = () => {
   const menu = useSelector((state) => state.menu);
   // const [category, setCategory] = useState()
@@ -16,6 +17,7 @@ const MenuPage = () => {
 
   useEffect(() => {
     dispatch(loadMenu());
+    
   }, []);
 
   return (
@@ -29,7 +31,8 @@ const MenuPage = () => {
       )}
 
       {menu.loading === "pending" && (
-        <LoadingStart message="Loading in progress" />
+        <LoadingStart message="" />
+        
       )}
 
       {menu.loading === "rejected" && (
