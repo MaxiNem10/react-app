@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 const CartProvider = ({ children }) => {
   const cart = useSelector((state) => state.cart);
 
-  useEffect(() => {
-    console.log("Cart saved to local storage");
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+  // useEffect(() => {
+  //   console.log("Cart saved to local storage");
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+  // }, [cart]);
 
   const sum = cart.reduce((sum, item) => {
     sum += item.food.price * item.qty;
