@@ -36,7 +36,7 @@ const MenuPage = () => {
       )}
 
       {menu.loading === "rejected" && (
-        <LoadingError message="Error loading data" />
+        <LoadingError message="Ошибка загрузки данных!!!" />
       )}
     </>
   );
