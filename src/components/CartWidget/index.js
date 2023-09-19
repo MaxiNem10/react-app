@@ -9,9 +9,9 @@ const CartWidget = ({ cart, sum }) => {
       <div className="mx-auto my-5 container flex flex-row-reverse text-right">
         <Link to="/cart">
           <div className="flex justify-end">
-            <CartIcon /> X { cart.length} 
+            <CartIcon /> X {cart.length} 
           </div>
-          <div>Сумма: {sum} рубы</div>
+          <div>Сумма: {sum} руб</div>
         </Link>
       </div>
     );
