@@ -15,7 +15,7 @@
     "Food": {
       "type": "string"
     },
-    "ingridients": {
+    "sostav": {
       "type": "json"
     },
     "image": {

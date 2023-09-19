@@ -3,7 +3,6 @@ import { Link, Outlet } from "react-router-dom";
 import MainMenu from "./components/MainMenu";
 import CartProvider from "./components/CardProviders/CardProviders";
 import CartWidget from "./components/CartWidget";
-// import Corzina from "./components/Corzina";
 
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
     <div className="App p-2">
      
         <MainMenu />
-        {/* <Corzina />  */}
+        
         
          
         <CartProvider>

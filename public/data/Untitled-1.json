@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "Food": "Buuzy",
+        "createdAt": "2023-09-01T10:55:37.161Z",
+        "updatedAt": "2023-09-02T15:38:19.461Z",
+        "publishedAt": "2023-09-01T10:56:24.178Z",
+        "description": "Сочные, вкусные",
+        "Number": null,
+        "price": 50,
+        "sostav": ["Говядина", "Свинина", "Лук", "Мука"],
+        "image": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "5bb79fd8-4630-5d0a-a71c-e72c825d70dc.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 620,
+              "height": 350,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_5bb79fd8-4630-5d0a-a71c-e72c825d70dc.jpg",
+                  "hash": "thumbnail_5bb79fd8_4630_5d0a_a71c_e72c825d70dc_e2a436cbc0",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 245,
+                  "height": 138,
+                  "size": 8.25,
+                  "url": "/uploads/thumbnail_5bb79fd8_4630_5d0a_a71c_e72c825d70dc_e2a436cbc0.jpg"
+                },
+                "small": {
+                  "name": "small_5bb79fd8-4630-5d0a-a71c-e72c825d70dc.jpg",
+                  "hash": "small_5bb79fd8_4630_5d0a_a71c_e72c825d70dc_e2a436cbc0",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 282,
+                  "size": 29.77,
+                  "url": "/uploads/small_5bb79fd8_4630_5d0a_a71c_e72c825d70dc_e2a436cbc0.jpg"
+                }
+              },
+              "hash": "5bb79fd8_4630_5d0a_a71c_e72c825d70dc_e2a436cbc0",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 46.65,
+              "url": "/uploads/5bb79fd8_4630_5d0a_a71c_e72c825d70dc_e2a436cbc0.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-09-01T10:53:37.147Z",
+              "updatedAt": "2023-09-01T10:53:37.147Z"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": { "page": 1, "pageSize": 25, "pageCount": 1, "total": 1 }
+  }
+}
